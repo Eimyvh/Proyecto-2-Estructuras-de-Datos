@@ -1,0 +1,28 @@
+# Visual Studio
+.vs/
+
+# Archivos de usuario de Visual Studio
+*.user
+*.suo
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Carpetas de compilación
+Debug/
+Release/
+x64/
+x86/
+
+# Archivos generados por compilación
+*.obj
+*.pdb
+*.ilk
+*.idb
+*.ipch
+*.tlog
+
+# Ejecutables
+*.exe
+*.dll
