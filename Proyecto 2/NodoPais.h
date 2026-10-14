@@ -1,6 +1,5 @@
 #ifndef NODOPAIS_H
 #define NODOPAIS_H
-
 #include "Pais.h"
 
 class NodoPais
@@ -12,5 +11,4 @@ public:
 
     NodoPais(Pais pPais);
 };
-
 #endif

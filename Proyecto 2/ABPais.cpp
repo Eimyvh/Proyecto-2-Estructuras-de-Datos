@@ -1,5 +1,4 @@
 #include "ABPais.h"
-
 ABPais::ABPais()
 {
     raiz = nullptr;
@@ -12,9 +11,7 @@ void ABPais::InsertaNodo(Pais pPais)
         raiz = new NodoPais(pPais);
         return;
     }
-
     NodoPais* actual = raiz;
-
     while (true)
     {
         if (pPais.getCodPais() < actual->valor.getCodPais())
@@ -30,7 +27,7 @@ void ABPais::InsertaNodo(Pais pPais)
         {
             if (actual->Hder == nullptr)
             {
-                actual->Hder = new NodoPais(pPais);
+                aual->Hder = new NodoPais(pPais);
                 return;
             }
             actual = actual->Hder;
@@ -61,4 +58,27 @@ bool ABPais::BuscarPais(int codPais)
         }
     }
     return false;
+}
+
+Pais* ABPais::ObtenerPais(int codPais) 
+{
+    NodoPais* actual = raiz;
+
+    while (actual != nullptr)
+    {
+        if (codPais == actual->valor.getCodPais())
+        {
+            return &(actual->valor);
+        }
+        else if (codPais < actual->valor.getCodPais())
+        {
+            actual = actual->Hizq;
+        }
+        else
+        {
+            actual = actual->Hder;
+        }
+    }
+
+    return nullptr;
 }
